@@ -1,8 +1,8 @@
-# rubocop:enable Layout/LineLength, Style/GlobalVars
+# rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
 require 'rest-client'
 require 'json'
 
-class Covid_Numbers
+class CovidNumbers
   def inform(query)
     country = ''
     case query
@@ -34,4 +34,4 @@ class Covid_Numbers
     end
   end
 end
-# rubocop:disable Layout/LineLength, Style/GlobalVars
+# rubocop:enable Metrics/MethodLength, Metrics/CyclomaticComplexity:
