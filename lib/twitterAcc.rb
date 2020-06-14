@@ -8,7 +8,7 @@ class TwitterAcc
   def initialize
     @client = Twitter::REST::Client.new $config
   end
-  
+
   def update_tweet(tweet)
     if tweet.length > 280
       puts "this tweet its too long: #{tweet.length}, make it smaller"
@@ -45,4 +45,16 @@ class TwitterAcc
     help
   end
 
+  def help
+    puts
+    puts 'Done!'
+    puts 'Command list:'
+    puts 'Type 1 To mass inform both symptoms and nearby emergencies'
+    puts 'Type 2 To favorite tweets'
+    puts 'Type 3 To update about covid numbers'
+    puts 'Type 0 or hold ctrl and type C to leave'
+    puts
+  end
+
+  private :inform_symptoms, :inform_nearby_hospitals
 end
