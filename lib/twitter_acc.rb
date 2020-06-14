@@ -1,8 +1,9 @@
+# rubocop:disable Layout/LineLength, Style/GlobalVars
 require 'Twitter'
 require_relative './client.rb'
 require_relative './covid.rb'
 
-class TwitterAcc 
+class TwitterAcc
   attr_accessor :client
 
   def initialize
@@ -58,3 +59,4 @@ class TwitterAcc
 
   private :inform_symptoms, :inform_nearby_hospitals
 end
+# rubocop:enable Layout/LineLength, Style/GlobalVars
