@@ -1,4 +1,4 @@
-# rubocop:disable Layout/LineLength, Style/GlobalVars
+# rubocop:disable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, Metrics/PerceivedComplexity:
 require 'Twitter'
 
 $config = {
@@ -8,7 +8,7 @@ $config = {
   access_token_secret: ''
 }
 
-def setConfig
+def set_config
   $valid = false
   until $valid
     def ask
@@ -54,4 +54,4 @@ def setConfig
   end
 end
 
-# rubocop:enable Layout/LineLength, Style/GlobalVars
+# rubocop:enable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, Metrics/PerceivedComplexity:
