@@ -16,6 +16,7 @@ class TwitterAcc < CovidNumbers
       help
     else
       @client.update(tweet)
+      puts "You tweeted: #{tweet}"
     end
   end
 
@@ -29,8 +30,8 @@ class TwitterAcc < CovidNumbers
 
   def mass_inform(sleep_time)
     sleep(sleep_time.to_i)
-    topics = ["I think I've got corona", "I think I've got coronavirus", "I think I've god covid19"]
-    tweets = @client.search(topics.sample, result_type: 'recent').take(2)
+    topics = ["coronavirus", "covid19"]
+    tweets = @client.search(topics.sample, result_type: 'recent').take(7)
 
     tweets.each do |tweet|
       inform_symptoms(tweet.user.screen_name)
@@ -45,10 +46,11 @@ class TwitterAcc < CovidNumbers
     puts 'Command list:'
     puts 'Type 1 To mass inform both symptoms and nearby emergencies'
     puts 'Type 2 To update about covid numbers'
+    puts 'Type 3 To tweet'
     puts 'Type 0 or hold ctrl and type C to leave'
     puts
   end
 
-  private :inform_symptoms, :inform_nearby_hospitals, :client
+  private :inform_symptoms, :inform_nearby_hospitals
 end
 # rubocop:enable Layout/LineLength, Style/GlobalVars

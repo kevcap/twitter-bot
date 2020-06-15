@@ -36,10 +36,10 @@ def set_config
         end
       elsif answer == 2
         $config = {
-          consumer_key: 't01QK9KnKcMdTJxWhfmw8iyiu',
-          consumer_secret: 'LieYtk811T8k8FxAEkJSmX3SN5vlJF5dinLmmqi3xZFaklmwPP',
-          access_token: '1270731742870110208-sILb7qIHfiZpYXou4TEgr3GMgI4TA4',
-          access_token_secret: 'K2tNXkdtsH4ecUQubaS8guXCxDFSEqcCEnNoUagedOX6z'
+          consumer_key: 'jic1v5cFG1gL1Ein58drMav8Q',
+          consumer_secret: 'gGXqkyjAjUmHVhYtKAxQrTAd1oY5kuSpbyQH40JdOawuwXDPZp',
+          access_token: '1270731742870110208-qqg1qq6cmkXxqgPeXpKX2VjhGDFkuk',
+          access_token_secret: '2gf9OSVwBM7Vozdf2Z6wIEZntiyOB7phh6X9RhBZf2dko'
         }
         $valid = true
       elsif answer.zero?

@@ -33,6 +33,11 @@ while is_on
         puts 'Please, select a valid value (between 1 and 5)'
       end
     end
+  when 3
+    print "Tweet: "
+    tweet = gets.chomp
+    twitter.update_tweet(tweet)
+    twitter.help
   end
 end
 # rubocop: enable Metrics/BlockNesting, Layout/LineLength
