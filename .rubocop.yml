@@ -3,6 +3,8 @@ AllCops:
     - "README.md"
     - "Guardfile"
     - "Rakefile"
+    - "./spec/spec_tests.rb"
+    - "./spec/spec_helper.rb"
   DisplayCopNames: true
 Layout/LineLength:
   Max: 120

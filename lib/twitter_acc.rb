@@ -19,13 +19,6 @@ class TwitterAcc < CovidNumbers
     end
   end
 
-  def favorite
-    topics = ['cure to covid19', "we'll beat covid", "I'm cured of corona"]
-    tweets = @client.search(topics.sample, result_type: 'recent').take(15)
-    @client.favorite(tweets)
-    help
-  end
-
   def inform_symptoms(user)
     update_tweet("Hey @#{user} Diagnostic Tip:\nGet tested for COVID if you have ANY symptom from this list:\nNausea/diarrhea\nRash/red toes\n Fatigue/body aches\nLoss of taste/smell\nCough, sore throat, chest pain\nFever, chills\n~20% patients DON’T have typical fever/respiratory symptoms")
   end
@@ -51,12 +44,11 @@ class TwitterAcc < CovidNumbers
     puts 'Done!'
     puts 'Command list:'
     puts 'Type 1 To mass inform both symptoms and nearby emergencies'
-    puts 'Type 2 To favorite tweets'
-    puts 'Type 3 To update about covid numbers'
+    puts 'Type 2 To update about covid numbers'
     puts 'Type 0 or hold ctrl and type C to leave'
     puts
   end
 
-  private :inform_symptoms, :inform_nearby_hospitals
+  private :inform_symptoms, :inform_nearby_hospitals, :client
 end
 # rubocop:enable Layout/LineLength, Style/GlobalVars

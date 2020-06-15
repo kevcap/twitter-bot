@@ -21,8 +21,6 @@ while is_on
     sleep_time = gets.chomp
     twitter.mass_inform(sleep_time)
   when 2
-    twitter.favorite
-  when 3
     puts 'Please select one country: '
     invalid = true
     while invalid

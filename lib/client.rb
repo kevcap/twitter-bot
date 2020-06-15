@@ -41,7 +41,6 @@ def set_config
           access_token: '1270731742870110208-sILb7qIHfiZpYXou4TEgr3GMgI4TA4',
           access_token_secret: 'K2tNXkdtsH4ecUQubaS8guXCxDFSEqcCEnNoUagedOX6z'
         }
-        p "Your config is: #{$config}"
         $valid = true
       elsif answer.zero?
         exit
