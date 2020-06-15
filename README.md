@@ -29,7 +29,7 @@ This is a Twitter Bot project, which informs symptoms, nearby emergencies and co
 
 <p align="center">
   <a href="" rel="noopener">
-  <img src="./img/screenshot.gif" alt="Project Screenshot"></a>
+  <img src="./img/screenshot.png" alt="Project Screenshot"></a>
 </p>
 ---
 
