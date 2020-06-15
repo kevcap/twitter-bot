@@ -24,10 +24,13 @@
 
 ## 🧐 About <a name = "about"></a>
 <h3 align="center"> 
-   This is a Twitter Bot project, which informs symptoms, nearby emergencies and covid numbers arround the world
-<small><a href="https://www.theodinproject.com/courses/ruby-programming/lessons/bubble-sort">Odin Project</a></small></h3>
+This is a Twitter Bot project, which informs symptoms, nearby emergencies and covid numbers around the world. Here's the project specification: https://www.notion.so/Build-your-own-bot-ebd0d7ac5da240e5987720bdc83f38fa
+</h3>
 
-
+<p align="center">
+  <a href="" rel="noopener">
+  <img src="./img/screenshot.gif" alt="Project Screenshot"></a>
+</p>
 ---
 
 ## 🔧 Built with<a name = "built_using"></a>
