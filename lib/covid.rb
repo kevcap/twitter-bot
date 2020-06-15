@@ -22,9 +22,9 @@ class CovidNumbers
     base_url = 'https://api.covid19api.com/total/country/'
     begin
       resp = RestClient.get "#{base_url}#{country}"
-      $data = JSON.parse(resp.body)
-      $data = $data[-1]
-      text = "Last numbers of Covid19 in #{$data['Country']}: Cases: #{$data['Confirmed']}, Deaths: #{$data['Deaths']}"
+      @data = JSON.parse(resp.body)
+      @data = @data[-1]
+      text = "Last numbers of Covid19 in #{@data['Country']}: Cases: #{@data['Confirmed']}, Deaths: #{@data['Deaths']}"
       puts text
       update_tweet(text)
       help

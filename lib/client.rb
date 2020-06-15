@@ -1,4 +1,4 @@
-# rubocop:disable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, Metrics/PerceivedComplexity:
+# rubocop:disable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, :
 require 'Twitter'
 
 $config = {
@@ -13,7 +13,7 @@ def set_config
   until $valid
     def ask
       puts
-      p "Please, type [1] to put your TWITTER API Keys or type [0] to leave"
+      p 'Please, type [1] to put your TWITTER API Keys or type [0] to leave'
       answer = gets.chomp.to_i
       if answer == 1
         p 'Please type your keys below: '
@@ -45,4 +45,4 @@ def set_config
   end
 end
 
-# rubocop:enable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, Metrics/PerceivedComplexity:
+# rubocop:enable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength:

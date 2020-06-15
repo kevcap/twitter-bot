@@ -30,7 +30,7 @@ class TwitterAcc < CovidNumbers
 
   def mass_inform(sleep_time)
     sleep(sleep_time.to_i)
-    topics = ["coronavirus", "covid19"]
+    topics = %w[coronavirus covid19]
     tweets = @client.search(topics.sample, result_type: 'recent').take(7)
 
     tweets.each do |tweet|

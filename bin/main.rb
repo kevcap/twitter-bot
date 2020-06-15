@@ -34,7 +34,7 @@ while is_on
       end
     end
   when 3
-    print "Tweet: "
+    print 'Tweet: '
     tweet = gets.chomp
     twitter.update_tweet(tweet)
     twitter.help
