@@ -27,7 +27,7 @@ while is_on
       puts '1- USA; 2- Brazil; 3- Russia; 4- Italy; 5- India'
       q = gets.chomp.to_i
       if (1..5).include?(q)
-        twitter.inform(q)
+        twitter.get_contry(q)
         invalid = false
       else
         puts 'Please, select a valid value (between 1 and 5)'

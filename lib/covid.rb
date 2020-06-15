@@ -4,24 +4,27 @@ require 'json'
 require_relative './twitter_acc.rb'
 
 class CovidNumbers
-  def inform(query)
-    country = ''
-    case query
+  @country = ''
+  def get_contry(q)
+    case q
     when 1
-      country = 'united-states'
+      @country = 'united-states'
     when 2
-      country = 'brazil'
+      @country = 'brazil'
     when 3
-      country = 'russia'
+      @country = 'russia'
     when 4
-      country = 'italy'
+      @country = 'italy'
     when 5
-      country = 'india'
+      @country = 'india'
     end
+    inform(@country)
+  end
 
-    base_url = 'https://api.covid19api.com/total/country/'
+  def inform(query)
+   base_url = 'https://api.covid19api.com/total/country/'
     begin
-      resp = RestClient.get "#{base_url}#{country}"
+      resp = RestClient.get "#{base_url}#{query}"
       @data = JSON.parse(resp.body)
       @data = @data[-1]
       text = "Last numbers of Covid19 in #{@data['Country']}: Cases: #{@data['Confirmed']}, Deaths: #{@data['Deaths']}"
