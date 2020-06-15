@@ -1,2 +1,2 @@
 --require spec_helper
---require covid_test
+--require spec_tests
