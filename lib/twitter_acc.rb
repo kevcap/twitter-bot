@@ -3,7 +3,7 @@ require 'Twitter'
 require_relative './client.rb'
 require_relative './covid.rb'
 
-class TwitterAcc
+class TwitterAcc < CovidNumbers
   attr_accessor :client
 
   def initialize
