@@ -1,5 +1,5 @@
 # rubocop:disable Style/GlobalVars, Lint/NestedMethodDefinition, Metrics/MethodLength, :
-require 'Twitter'
+require 'twitter'
 
 $config = {
   consumer_key: '',
@@ -26,7 +26,7 @@ def set_config
         print 'access_token_secret: '
         $config[:access_token_secret] = gets.chomp
         p "Your config is: #{$config}"
-        print 'is that Correct? [Y]es [N]o: [0] to leave'
+        print 'is that Correct? [Y]es [N]o: [0] to leave: '
         check_if_config_is_ok = gets.chomp.upcase
         if check_if_config_is_ok == 'Y'
           $valid = true
