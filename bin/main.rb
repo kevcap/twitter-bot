@@ -1,5 +1,5 @@
 # rubocop: disable Metrics/BlockNesting, Layout/LineLength
-require 'Twitter'
+require 'twitter'
 require_relative '../lib/twitter_acc.rb'
 system 'cls'
 puts 'Welcome to your twitter bot! My mission is to inform the symptoms, nearby emergencys and covid cases, so you can get medical assistance, in case you ever need it.'

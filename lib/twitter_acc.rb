@@ -1,5 +1,5 @@
 # rubocop:disable Layout/LineLength, Style/GlobalVars
-require 'Twitter'
+require 'twitter'
 require_relative './client.rb'
 require_relative './covid.rb'
 

@@ -43,6 +43,7 @@ This is a Twitter Bot project, which informs symptoms, nearby emergencies and co
 - Clone or download this repository;
 - Unpack (if downloaded);
 - If you dont have a TWITTER API Keys, you will need to apply for a Twitter Developer: https://developer.twitter.com/en
+- run 'bundle install' before run the app
 - in your terminal, go to the bin folder and type 'ruby main.rb';
 
 Command list:
