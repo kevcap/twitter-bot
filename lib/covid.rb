@@ -1,12 +1,11 @@
-# rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
 require 'rest-client'
 require 'json'
 require_relative './twitter_acc.rb'
 
 class CovidNumbers
   @country = ''
-  def get_contry(q)
-    case q
+  def get_contry(quer)
+    case quer
     when 1
       @country = 'united-states'
     when 2
@@ -22,7 +21,7 @@ class CovidNumbers
   end
 
   def inform(query)
-   base_url = 'https://api.covid19api.com/total/country/'
+    base_url = 'https://api.covid19api.com/total/country/'
     begin
       resp = RestClient.get "#{base_url}#{query}"
       @data = JSON.parse(resp.body)
@@ -38,4 +37,4 @@ class CovidNumbers
     end
   end
 end
-# rubocop:enable Metrics/MethodLength, Metrics/CyclomaticComplexity:
+# rubocop:enable:
